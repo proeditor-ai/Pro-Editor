@@ -1,0 +1,1 @@
+{"name": "proeditor-ai","version": "1.0.0","description": "A project for AI-assisted editing.","main": "index.js","scripts": {"test": "echo 'Error: no test specified' && exit 1"},"repository": {"type": "git","url": "git+https://github.com/username/repo.git"},"author": "Your Name","license": "ISC"}
