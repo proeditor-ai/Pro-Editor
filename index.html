@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pro Editor</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 2rem; }
-  textarea { width: 100%; height: 120px; }
-  button { padding: 0.6rem 1.2rem; margin-top: 1rem; }
-  video { width: 100%; margin-top: 1rem; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Editor</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Pro Editor (Demo Frontend)</h1>
-<p>Type your idea and click Generate Video:</p>
-<textarea id="prompt" placeholder="Describe your video idea..."></textarea>
-<button id="go">Generate Video</button>
-<video id="preview" controls></video>
+  <div class="container">
+    <h1>🎬 Pro Editor AI</h1>
+    <textarea id="prompt" placeholder="Enter your video idea or script..."></textarea>
+    <button id="generateBtn">Generate Script</button>
+    <pre id="output"></pre>
+  </div>
 
-<script>
-document.getElementById("go").onclick = async () => {
-  const text = document.getElementById("prompt").value.trim();
-  if (!text) return alert("Please type something first!");
-  alert("Sending prompt to backend… (Replace BACKEND_URL below once you deploy)");
-  const res = await fetch("https://YOUR_BACKEND_URL_HERE/api/generate?text=" + encodeURIComponent(text));
-  const blob = await res.blob();
-  document.getElementById("preview").src = URL.createObjectURL(blob);
-};
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
