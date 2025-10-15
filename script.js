@@ -11,7 +11,7 @@ generateBtn.addEventListener("click", async () => {
   output.textContent = "⏳ Generating, please wait...";
 
   try {
-    const response = await fetch("https://your-render-backend-url.onrender.com/generate", {
+  const response = await fetch("https://proeditor.onrender.com/generate", { 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }),
